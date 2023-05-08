@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabla con cabecera</title>
+  <style>
+  .centered-table {
+    width: 60%;
+    margin:auto;
+    border-collapse: collapse;
+  }
+
+  .centered-table th,
+  .centered-table td {
+    padding: 8px;
+    text-align: center;
+  }
+
+  .centered-table th {
+    background-color: #3498db;
+    color: white;
+  }
+
+  .centered-table td {
+    background-color: #f2f2f2;
+  }
+
+  .centered-table tr:nth-child(even) td {
+    background-color: #e9e9e9;
+  }
+
+  </style>
+</head>
+<body>
+  <table class="centered-table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Artista</th>
+        <th>Genero</th>
+        <th>Descripcion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (var i = 0; i < table.length; i++) { %>
+        <tr>
+          <td><%= table[i].name %></td>
+          <td><%= table[i].artista %></td>
+          <td><%= table[i].genero %></td>
+          <td><%= table[i].comentario %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>
